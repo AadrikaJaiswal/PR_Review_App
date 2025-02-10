@@ -10,9 +10,9 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 
-groq_api_key = os.getenv("groq_api_key")
-langsmith_api_key = os.getenv("langsmith_api_key")
-github_token = os.getenv("github_token")
+groq_api_key = st.secrets["groq_api_key"]
+langsmith_api_key = st.secrets["langsmith_api_key"]
+github_token = st.secrets["github_token"]
 
 os.environ["LANGCHAIN_API_KEY"] = langsmith_api_key
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
